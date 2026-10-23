@@ -1,5 +1,8 @@
 #include "TDANodoCircular.h"
 #include "TDAListaCircular.h"
+#include <iostream>
+
+using namespace std; 
 
 TDAListaCircular *Inicilizar(){
 	TDAListaCircular *c;
@@ -87,7 +90,7 @@ void BorrarElemento(TDAListaCircular*&listC, string nombreUsuario) {
     nodo* actual = listC->cab;
     nodo* anterior = listC->cola;
     do {
-        if (actual->info.nombre == nombreUsuario) {   // <-- corregido
+        if (actual->info.nombre == nombreUsuario){   
             if (actual == listC->cab && actual == listC->cola) { // Solo un elemento
                 listC->cab = listC->cola = nullptr;
             } else {
